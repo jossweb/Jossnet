@@ -1,0 +1,9 @@
+build/
+noise-c/
+cmake*/
+.DS_Store
+.idea/
+cmake-build-*/
+*.o
+*.obj
+*.exe
