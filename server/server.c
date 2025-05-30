@@ -167,7 +167,7 @@ const char* concatenate(char* str1, const char* str2) {
     str1[i] = '\0';
     return str1;
 }
-int main(int argc, char *argv[]) {
+int server() {
     printf("Jossnet Server prototype 2025\n");
     printf("[*] Loading ...\n");
     NoiseHandshakeState *handshake = 0;
@@ -184,13 +184,6 @@ int main(int argc, char *argv[]) {
     int action;
     int port = 4242;
 
-    if (argc >= 2) {
-        port = atoi(argv[1]);
-        if (!(port > 0 && port < 65536)) {
-            printf("\033[31m[X] invalid port\033[0m\n");
-            return 0;
-        }
-    }
     int gen = gen_keys();
     printf("[*] Generating keys %d\n", gen);
 

@@ -7,10 +7,13 @@ include_directories(${CMAKE_SOURCE_DIR}/build/include)
 
 link_directories(${CMAKE_SOURCE_DIR}/build/lib)
 
-add_executable(jnet_c server.c
-        client.c
-        common.c
-        common.h
-        keygen.c)
+add_executable(jnet_c
+        server/server.c
+        client/client.c
+        server/common.c
+        server/common.h
+        keys/keygen.c
+        server/server.h
+        main.c)
 
 target_link_libraries(jnet_c noiseprotocol noisekeys noiseprotobufs)
