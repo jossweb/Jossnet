@@ -14,6 +14,7 @@ add_executable(jnet_c
         server/common.h
         keys/keygen.c
         server/server.h
-        main.c)
+        main.c
+        client/client.h)
 
 target_link_libraries(jnet_c noiseprotocol noisekeys noiseprotobufs)
